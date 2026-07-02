@@ -105,6 +105,14 @@ def send_email(receiver, subject, otp, name):
         server.login(sender_email, sender_password)
         server.send_message(msg)
 
+@app.route("/")
+def home():
+    return jsonify({
+        "status": "online",
+        "message": "Secure QR Code E-Voting API Server is Running!",
+        "version": "1.0.0"
+    })
+
 @app.route("/send-otp", methods=["POST"])
 def send_otp():
     data = request.get_json()
