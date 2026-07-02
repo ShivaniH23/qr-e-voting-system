@@ -1,0 +1,25 @@
+# Python virtual environments & cache
+.venv/
+.venv_new/
+__pycache__/
+*.pyc
+
+# Environment secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Node/React dependencies and builds
+node_modules/
+build/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Project local database states (avoid committing active data logs)
+backend/otp_data.json
+backend/sessions.json
+backend/voters.json
